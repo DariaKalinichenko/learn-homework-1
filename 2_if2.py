@@ -15,12 +15,22 @@
 
 """
 
+def compare_string(first_string, second_string):
+      if isinstance(first_string, str) == False or isinstance(second_string, str) == False:
+            return 0
+      if first_string == second_string:
+            return 1
+      elif len(first_string) > len(second_string):
+            return 2
+      elif first_string != second_string and second_string == 'learn':
+            return 3
+
 def main():
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
+    print(compare_string(1, 'hello'))  #0
+    print(compare_string('hello', 'hello'))  #1
+    print(compare_string('hellooooo', 'hello'))  #2
+    print(compare_string('hello', 'learn'))  #3
+
     
 if __name__ == "__main__":
     main()
